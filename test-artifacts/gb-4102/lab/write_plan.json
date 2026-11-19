@@ -1,0 +1,22 @@
+{
+  "plan_version": 5,
+  "purpose": "两轮崩溃试验共用的同一写入计划；参数冻结，任何一轮都不得改动。",
+  "table": "telemetry",
+  "batch_rows": 25,
+  "total_batches": 240,
+  "phases": [
+    {"name": "paced", "batches": "1-180", "pace_ms": 40},
+    {"name": "burst", "batches": "181-235", "pace_ms": 0},
+    {"name": "inflight", "batches": "236-240", "pace_ms": 0,
+     "detail": "每批用独立连接：INSERT 成功，COMMIT 已发出但不读回执，连接保持打开直到停库。停库时这批可能已落库也可能没有，用来覆盖「已落库但没收到回执」。"}
+  ],
+  "kill_at_batch": 240,
+  "kill_settle_ms": 50,
+  "kill_point": "处理完第 240 批后静置 50ms，SIGKILL mysqld（写入进程主机不受影响，回执线程继续跑完）",
+  "receipt_fsync_interval_ms": 50,
+  "id_formula": "id = (batch-1)*batch_rows + seq, seq=1..batch_rows",
+  "sensor_id": 17,
+  "recorded_at": "2026-11-17T00:00:00",
+  "device_type": "pump",
+  "value_formula": "30 + ((batch+seq) % 900)/10"
+}

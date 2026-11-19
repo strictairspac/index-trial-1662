@@ -1,0 +1,33 @@
+{
+  "batches_classified": 240,
+  "complete": true,
+  "finished_at": 1795130295.780134,
+  "label": "innodb_flush_log_at_trx_commit=2",
+  "plan_sha256": "f17079678aaf20fcd93a22d4679f4761d58de098f047ecb4ca6e21061cb23977",
+  "receipts_read": 235,
+  "recovered_at": 1795130295.478532,
+  "round": "fc2",
+  "summary": {
+    "acked_batches": 235,
+    "acked_lost_batches": [],
+    "counts": {
+      "acked_lost": 0,
+      "acked_readable": 235,
+      "unacked_absent": 0,
+      "unacked_partial": 0,
+      "unacked_readable": 5
+    },
+    "rows_expected_total": 6000,
+    "rows_present": 6000,
+    "unacked_batches": 5,
+    "unacked_readable_batches": [
+      236,
+      237,
+      238,
+      239,
+      240
+    ]
+  },
+  "torn_receipt_lines": 0,
+  "total_batches": 240
+}

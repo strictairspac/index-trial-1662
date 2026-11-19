@@ -1,0 +1,41 @@
+[
+  {
+    "counts": {
+      "acked_lost": 0,
+      "acked_readable": 235,
+      "unacked_absent": 0,
+      "unacked_partial": 0,
+      "unacked_readable": 5
+    },
+    "receipts": 235,
+    "repeat": 1,
+    "torn": 0,
+    "write_elapsed_s": 7.387
+  },
+  {
+    "counts": {
+      "acked_lost": 0,
+      "acked_readable": 235,
+      "unacked_absent": 0,
+      "unacked_partial": 0,
+      "unacked_readable": 5
+    },
+    "receipts": 235,
+    "repeat": 2,
+    "torn": 0,
+    "write_elapsed_s": 7.378
+  },
+  {
+    "counts": {
+      "acked_lost": 0,
+      "acked_readable": 235,
+      "unacked_absent": 0,
+      "unacked_partial": 0,
+      "unacked_readable": 5
+    },
+    "receipts": 235,
+    "repeat": 3,
+    "torn": 0,
+    "write_elapsed_s": 7.401
+  }
+]

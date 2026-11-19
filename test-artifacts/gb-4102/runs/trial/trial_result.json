@@ -1,0 +1,156 @@
+{
+  "duration_s": 0.484,
+  "fixture_rows": 5000,
+  "result": {
+    "after_median_ms": 0.4394,
+    "after_plan": [
+      {
+        "Extra": "Using index condition; Using filesort",
+        "filtered": 100.0,
+        "id": 1,
+        "key": "trial_candidate",
+        "key_len": "126",
+        "partitions": null,
+        "possible_keys": "trial_candidate",
+        "ref": null,
+        "rows": 50,
+        "select_type": "SIMPLE",
+        "table": "telemetry",
+        "type": "range"
+      }
+    ],
+    "after_samples_ms": [
+      0.6801,
+      0.4405,
+      0.4394,
+      0.3685,
+      0.3797
+    ],
+    "before_median_ms": 1.0476,
+    "before_plan": [
+      {
+        "Extra": "Using where",
+        "filtered": 1.11,
+        "id": 1,
+        "key": "PRIMARY",
+        "key_len": "4",
+        "partitions": null,
+        "possible_keys": null,
+        "ref": null,
+        "rows": 5000,
+        "select_type": "SIMPLE",
+        "table": "telemetry",
+        "type": "index"
+      }
+    ],
+    "before_samples_ms": [
+      10.1771,
+      1.2873,
+      1.0476,
+      1.0289,
+      1.0287
+    ],
+    "checksum": "fb778c9539497184a139d1ca9d92421a1ad5346c928db913ee7f543e8d555505",
+    "equal_results": true,
+    "insert20_after_ms": 0.6312,
+    "insert20_before_ms": 0.6062,
+    "limitations": [
+      "5000-row deterministic dataset; timings include Python driver and cache effects",
+      "20-row write probe is rolled back; sequence gaps are normal",
+      "heuristic prefix score is not MySQL optimizer cost; no guaranteed speedup"
+    ],
+    "parameters": {
+      "end": "2026-11-30T23:59:59",
+      "sensor": 17,
+      "start": "2026-11-01T00:00:00"
+    },
+    "prefix": {
+      "formula": "equality prefix +40/column, first range +20, max 100; heuristic only",
+      "matched_prefix": [
+        "sensor_id",
+        "recorded_at"
+      ],
+      "reason": [
+        "sensor_id: equality prefix +40",
+        "recorded_at: range +20; following columns cannot extend lookup"
+      ],
+      "score": 60
+    },
+    "preview": [
+      {
+        "device_type": "motor",
+        "id": 17,
+        "recorded_at": "2026-11-01T02:08:00",
+        "sensor_id": 17,
+        "value": 57.2
+      },
+      {
+        "device_type": "valve",
+        "id": 117,
+        "recorded_at": "2026-11-01T15:28:00",
+        "sensor_id": 17,
+        "value": 47.2
+      },
+      {
+        "device_type": "pump",
+        "id": 217,
+        "recorded_at": "2026-11-02T04:48:00",
+        "sensor_id": 17,
+        "value": 37.2
+      },
+      {
+        "device_type": "motor",
+        "id": 317,
+        "recorded_at": "2026-11-02T18:08:00",
+        "sensor_id": 17,
+        "value": 117.2
+      },
+      {
+        "device_type": "valve",
+        "id": 417,
+        "recorded_at": "2026-11-03T07:28:00",
+        "sensor_id": 17,
+        "value": 107.2
+      },
+      {
+        "device_type": "pump",
+        "id": 517,
+        "recorded_at": "2026-11-03T20:48:00",
+        "sensor_id": 17,
+        "value": 97.2
+      },
+      {
+        "device_type": "motor",
+        "id": 617,
+        "recorded_at": "2026-11-04T10:08:00",
+        "sensor_id": 17,
+        "value": 87.2
+      },
+      {
+        "device_type": "valve",
+        "id": 717,
+        "recorded_at": "2026-11-04T23:28:00",
+        "sensor_id": 17,
+        "value": 77.2
+      },
+      {
+        "device_type": "pump",
+        "id": 817,
+        "recorded_at": "2026-11-05T12:48:00",
+        "sensor_id": 17,
+        "value": 67.2
+      },
+      {
+        "device_type": "motor",
+        "id": 917,
+        "recorded_at": "2026-11-06T02:08:00",
+        "sensor_id": 17,
+        "value": 57.2
+      }
+    ],
+    "query": "SELECT id,sensor_id,recorded_at,device_type,value FROM telemetry WHERE sensor_id=:sensor AND recorded_at>=:start AND recorded_at<=:end ORDER BY id",
+    "rows": 50
+  },
+  "returncode": 0,
+  "stderr": ""
+}

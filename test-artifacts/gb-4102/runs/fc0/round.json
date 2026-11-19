@@ -1,0 +1,28 @@
+{
+  "batch_rows": 25,
+  "datadir": "/tmp/gb4102-lab/fc0/data",
+  "flush_log_at_trx_commit": 0,
+  "inflight_batches": [
+    236,
+    237,
+    238,
+    239,
+    240
+  ],
+  "kill_at_batch": 240,
+  "kill_wall": 1795130185.579021,
+  "killed_at": 1795130185.616221,
+  "killed_pid": 17078,
+  "label": "innodb_flush_log_at_trx_commit=0",
+  "log_writer_threads": "OFF",
+  "pid": 17078,
+  "plan_sha256": "f17079678aaf20fcd93a22d4679f4761d58de098f047ecb4ca6e21061cb23977",
+  "plan_version": 5,
+  "port": 19302,
+  "receipt_fsyncs_before_close": 139,
+  "round": "fc0",
+  "started_at": 1795130178.29685,
+  "status": "killed",
+  "total_batches": 240,
+  "write_elapsed_s": 7.315
+}
